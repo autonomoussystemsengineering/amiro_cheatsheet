@@ -1,0 +1,88 @@
+\documentclass[oneside,a4paper,12pt,headsepline,cleardoubleempty,%
+    pointlessnumbers,bibtotoc]{scrreprt}
+    
+\usepackage{APackages}
+
+\usepackage{inputenc}	% erlaubt von US-ASCII verschiedene Zeichenkodierung
+\inputencoding{utf8}		% Wir wollen UTF-8 (=keine Probleme mit Umlauten etc.)
+
+\pagestyle{plain}	% leere Seitenstil (keine Seitennummern usw.)
+%\numberwithin{equation}{subsection}
+%\renewcommand{\theequation}{\arabic{section}.\arabic{subsection}.\arabic{equation}}
+%\numberwithin{figure}{section}
+%\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+
+% add text color
+\usepackage{color}
+
+% technical name definitions
+\newcommand{\amiro}{AMiRo}
+\newcommand{\amiros}{AMiRos}
+\newcommand{\diwheel}{{\it DiWheelDrive}}
+\newcommand{\power}{{\it PowerBoard}}
+\newcommand{\proxring}{{\it ProximityRing}}
+\newcommand{\light}{{\it LightRing}}
+\newcommand{\cognition}{{\it CognitionBoard}}
+\newcommand{\imageproc}{{\it ImageProcessing}}
+\newcommand{\progcable}{{\it programming cable}}
+
+% paths and program names
+\newcommand{\muroxdocu}{\textcolor{blue}{\url{www.multirobotix.de/dokuwiki/doku.php}}}
+\newcommand{\rsbdocu}{\textcolor{blue}{\url{docs.cor-lab.de}}}
+\newcommand{\utilitypath}{{\tt project/utilities/}}
+\newcommand{\utilitypathI}{{\it project/utilities/}}
+\newcommand{\demopath}{{\tt project/demo/}}
+\newcommand{\demopathI}{{\it project/demo/}}
+\newcommand{\amirohomepath}{{\tt root/}}
+\newcommand{\amirohomepathI}{{\it root/}}
+\newcommand{\testname}{{\tt braitenberg}}
+\newcommand{\testnameI}{{\it braitenberg}}
+\newcommand{\initialname}{{\tt initial}}
+\newcommand{\initialnameI}{{\it initial}}
+\newcommand{\stoppath}{{\tt project/tools/robotTools/}}
+\newcommand{\stoppathI}{{\it project/tools/robotTools/}}
+\newcommand{\stopname}{{\tt stopAMiRo}}
+\newcommand{\stopnameI}{{\it stopAMiRo}}
+\newcommand{\setlightspath}{{\tt project/act/}}
+\newcommand{\setlightspathI}{{\it project/act/}}
+\newcommand{\setlightsname}{{\tt setLights}}
+\newcommand{\setlightsnameI}{{\it setLights}}
+
+% module and additional program names
+\newcommand{\modulemurox}{{\tt murox/env}}
+\newcommand{\gtk}{GTKTerm}
+\newcommand{\gtkC}{gtkterm}
+
+% other markings
+\newcommand{\noref}{\textcolor{red}{???}}
+\newcommand{\working}{\textcolor{red}{\bf $>>>$ topic in progress $<<<$}}
+
+
+\hyphenation{}
+
+% Ende der Voreinstellungen
+
+\begin{document}
+\pagenumbering{roman}
+
+\include{ATitle}
+
+\newpage
+
+\tableofcontents
+
+%\listoffigures
+
+\newpage
+\pagenumbering{arabic}
+
+\include{AMainpart}
+
+\newpage
+
+\bibliographystyle{alpha}
+\bibliography{ALiterature}
+\appendix
+\include{AAppendix}
+
+\end{document}
